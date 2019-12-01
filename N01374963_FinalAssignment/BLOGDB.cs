@@ -81,6 +81,57 @@ namespace N01374963_FinalAssignment
 
         }
 
+
+        public Dictionary<String, String>FindBlogPost(int id)
+        {
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            Dictionary<String, String> blogpost = new Dictionary<String, String>();
+
+            try
+            {
+                string query = "select * from blog_post where blogid = " + id;
+                Debug.WriteLine("connection initialized...");
+                
+                Connect.Open();
+
+                MySqlCommand cmd = new MySqlCommand(query, Connect);
+                MySqlDataReader resultset = cmd.ExecuteReader();
+
+                List<Dictionary<String, String>> BlogPosts = new List<Dictionary<string, string>>();
+
+                while (resultset.Read())
+                {
+                    Dictionary<String, String> BlogPost = new Dictionary<string, string>();
+                    for(int i = 0; i<resultset.FieldCount; i++)
+                    {
+                        Debug.WriteLine("Attempting to transfer data of" + resultset.GetName(i));
+                        Debug.WriteLine("Attempting to transfer data of" + resultset.GetString(i));
+
+                        BlogPost.Add(resultset.GetName(i), resultset.GetString(i));
+                    
+                    }
+
+                    BlogPosts.Add(BlogPost);
+                }
+
+                blogpost = BlogPosts[0];
+
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the find blog method!");
+                Debug.WriteLine(ex.ToString());
+            }
+
+            Connect.Close();
+            Debug.WriteLine("Database Connection Terminated");
+
+            return blogpost;
+        
+        }
+
+
+
         public void AddBlogPost(BLOGPOST new_post)
         {
             string query = "insert into blog_post (blogtitle, blogbody) values ('{0}','{1}')";
