@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using MySql.Data.MySqlClient;
 using System.Globalization;
+using MySql.Data.MySqlClient;
 using System.Diagnostics;
 
 namespace N01374963_FinalAssignment
@@ -100,6 +100,50 @@ namespace N01374963_FinalAssignment
                 Debug.WriteLine(ex.ToString());
             }
             Connect.Close();
+        }
+
+        public void UpdateBlogPost(int blogid, BLOGPOST new_post)
+        {
+            string query = "update blog_page set blogtitle='{0}', blogbody='{1}' where blogid={3} ";
+            query = String.Format(query, new_post.GetBPTitle(), new_post.GetBPBody(), blogid);
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd = new MySqlCommand(query, Connect);
+
+            try
+            {
+                Connect.Open();
+                cmd.ExecuteNonQuery();
+                Debug.WriteLine("Execute query" + query);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the UpdateBlog Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+            Connect.Close();
+        }
+
+        public void DeleteBlogPost(int blogid)
+        {
+            string removeblogpost = "delete from blog_post where blogid = {0}";
+            removeblogpost = String.Format(removeblogpost, blogid);
+
+            MySqlConnection Connect = new MySqlConnection(ConnectionString);
+            MySqlCommand cmd_removeblogpost = new MySqlCommand(removeblogpost, Connect);
+
+            try
+            {
+                Connect.Open();
+                cmd_removeblogpost.ExecuteNonQuery();
+                Debug.WriteLine("Execute query" + cmd_removeblogpost);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Something went wrong in the delete Blog Method!");
+                Debug.WriteLine(ex.ToString());
+            }
+            Connect.Close();  
         }
     }
 }
