@@ -82,7 +82,7 @@ namespace N01374963_FinalAssignment
         }
 
 
-        public Dictionary<String, String>FindBlogPost(int id)
+        public Dictionary<String, String> FindBlogPost(int id)
         {
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
             Dictionary<String, String> blogpost = new Dictionary<String, String>();

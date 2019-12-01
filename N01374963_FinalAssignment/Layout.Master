@@ -6,10 +6,24 @@
 <head runat="server">
     <title>My Blog Page</title>
     <link rel="stylesheet" type="text/css" href="/Content/style.css" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
+    </head>
 <body>
+    <header>
+        <div class="cwidth">
+            <nav>
+                <ul>
+                    <li><a href="NewBlogPost.aspx">New Blog Post</a></li>
+                    <li><a href="ShowBlogPost.aspx">List of Blog Posts</a></li>
+                </ul>
+
+            </nav>
+
+        </div>
+
+
+    </header>
+
+
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="body" runat="server">
