@@ -1,0 +1,15 @@
+﻿
+/*
+Each column should be 45.45% wide with a gutter space of 9.09%
+*/
+.col2 {
+    width: 50%;
+    float: left;
+    margin-right: 0;
+}
+
+.col2last {
+    width: 50%;
+    float: right;
+    margin-right: 0;
+}
