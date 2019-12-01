@@ -81,7 +81,7 @@ namespace N01374963_FinalAssignment
 
         }
 
-        public void Add_Post(BLOGPOST new_post)
+        public void AddBlogPost(BLOGPOST new_post)
         {
             string query = "insert into blog_post (blogtitle, blogbody) values ('{0}','{1}')";
             query = String.Format(query, new_post.GetBPTitle(), new_post.GetBPBody());

@@ -25,7 +25,7 @@ namespace N01374963_FinalAssignment
             new_post.SetBPTitle(blog_title.Text);
             new_post.SetBPBody(blog_body.Text);
 
-            db.Add_Post(new_post);
+            db.AddBlogPost(new_post);
 
             Response.Redirect("BlogHomepage.aspx");
         }

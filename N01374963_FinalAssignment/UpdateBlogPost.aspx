@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="UpdateBlog.aspx.cs" Inherits="N01374963_FinalAssignment.UpdateBlog" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Layout.Master" AutoEventWireup="true" CodeBehind="UpdateBlogPost.aspx.cs" Inherits="N01374963_FinalAssignment.UpdateBlog" %>
 
 <asp:Content ID="updateblog" ContentPlaceHolderID="body" runat="server">
     <div id="blog" runat="server">
