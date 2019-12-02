@@ -82,10 +82,10 @@ namespace N01374963_FinalAssignment
         }
 
 
-        public Dictionary<String, String> FindBlogPost(int id)
+        public BLOGPOST FindBlogPost(int id)
         {
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
-            Dictionary<String, String> blogpost = new Dictionary<String, String>();
+            BLOGPOST result_blogpost = new BLOGPOST();
 
             try
             {
@@ -97,25 +97,33 @@ namespace N01374963_FinalAssignment
                 MySqlCommand cmd = new MySqlCommand(query, Connect);
                 MySqlDataReader resultset = cmd.ExecuteReader();
 
-                List<Dictionary<String, String>> BlogPosts = new List<Dictionary<string, string>>();
+                List<BLOGPOST> BlogPosts = new List<BLOGPOST>();
 
                 while (resultset.Read())
                 {
-                    Dictionary<String, String> BlogPost = new Dictionary<string, string>();
-                    for(int i = 0; i<resultset.FieldCount; i++)
+                    BLOGPOST currentblogpost = new BLOGPOST();
+
+                    for (int i = 0; i < resultset.FieldCount; i++)
                     {
-                        Debug.WriteLine("Attempting to transfer data of" + resultset.GetName(i));
-                        Debug.WriteLine("Attempting to transfer data of" + resultset.GetString(i));
+                        string key = resultset.GetName(i);
+                        string value = resultset.GetString(i);
 
-                        BlogPost.Add(resultset.GetName(i), resultset.GetString(i));
-                    
+                        Debug.WriteLine("Attempting to transfer" + key + "data of" + value);
+
+
+                        switch (key)
+                        {
+                            case "blogtitle":
+                                currentblogpost.SetBPTitle(value);
+                                break;
+                            case "blogbody":
+                                currentblogpost.SetBPBody(value);
+                                break;
+                        }
                     }
-
-                    BlogPosts.Add(BlogPost);
+                    BlogPosts.Add(currentblogpost);
                 }
-
-                blogpost = BlogPosts[0];
-
+                result_blogpost = BlogPosts[0];
             }
             catch(Exception ex)
             {
@@ -126,7 +134,7 @@ namespace N01374963_FinalAssignment
             Connect.Close();
             Debug.WriteLine("Database Connection Terminated");
 
-            return blogpost;
+            return result_blogpost;
         
         }
 

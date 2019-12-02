@@ -27,6 +27,7 @@ namespace N01374963_FinalAssignment
                 query += "where blogtitle like '%" + searchkey + "%'";
                 query += "where blogbody like '%" + searchkey + "%'";
             }
+            
 
             var db = new BLOGDB();
             List<Dictionary<String, String>> rs = db.List_Query(query);

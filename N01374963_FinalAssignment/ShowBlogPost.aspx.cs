@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace N01374963_FinalAssignment
 {
@@ -11,7 +13,7 @@ namespace N01374963_FinalAssignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             BLOGDB db = new BLOGDB();
             ShowBlogPostInfo(db);
         }
@@ -41,6 +43,22 @@ namespace N01374963_FinalAssignment
             if (!valid)
             {
                 blog.InnerHtml = "There was an error finding that blog post";
+            }
+        }
+
+        protected void Delete_BlogPost(object sender, EventArgs e)
+        {
+            bool valid = true;
+            string blogid = Request.QueryString["blogid"];
+
+            if (String.IsNullOrEmpty(blogid)) valid = false;
+
+            BLOGDB db = new BLOGDB();
+
+            if (valid)
+            {
+                db.DeleteBlogPost(Int32.Parse(blogid));
+                Response.Redirect("ListBlogPost.aspx");
             }
         }
 

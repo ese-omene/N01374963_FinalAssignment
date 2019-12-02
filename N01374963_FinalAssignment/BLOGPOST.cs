@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Globalization;
+using MySql.Data.MySqlClient;
+using System.Diagnostics;
 
 namespace N01374963_FinalAssignment
 {
@@ -10,7 +13,7 @@ namespace N01374963_FinalAssignment
 
         private string BPTitle;
         private string BPBody;
-        //private DateTime PDate;
+        
 
 
         public string GetBPTitle()
@@ -21,10 +24,7 @@ namespace N01374963_FinalAssignment
         {
             return BPBody;
         }
-        // public DateTime GetPDate()
-        // {
-        //     return PDate;
-        //  }
+        
 
         public void SetBPTitle(string value)
         {
@@ -35,10 +35,7 @@ namespace N01374963_FinalAssignment
             BPBody = value;
         }
 
-        // public void SetPDate (DateTime value)
-        // {
-        //      PDate = value;
-        // }
+        
 
     }
 }

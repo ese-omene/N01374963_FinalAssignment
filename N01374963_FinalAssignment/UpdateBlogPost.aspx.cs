@@ -5,7 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
-using System.Globalization;
 using System.Diagnostics;
 
 namespace N01374963_FinalAssignment
@@ -14,11 +13,12 @@ namespace N01374963_FinalAssignment
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
             if (!Page.IsPostBack)
             {
-                BLOGDB db = new BLOGDB();
-                ShowBlogInfo(db);
+                BLOGDB db = new BLOGDB(); 
+                ShowBlogInfo(db) ;
             }
 
         }
@@ -41,7 +41,7 @@ namespace N01374963_FinalAssignment
                 try
                 {
                     db.UpdateBlogPost(Int32.Parse(blogid), new_blog);
-                    Response.Redirect("ShowBlog.aspx?blogid=" + blogid);
+                    Response.Redirect("ShowBlogPost.aspx?blogid=" + blogid);
                 }
                 catch
                 {

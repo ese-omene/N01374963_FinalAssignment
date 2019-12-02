@@ -13,7 +13,7 @@
             <nav>
                 <ul>
                     <li><a href="NewBlogPost.aspx">New Blog Post</a></li>
-                    <li><a href="ShowBlogPost.aspx">List of Blog Posts</a></li>
+                    <li><a href="ListBlogPost.aspx">List of Blog Posts</a></li>
                 </ul>
 
             </nav>
