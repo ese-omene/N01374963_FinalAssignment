@@ -27,7 +27,7 @@ namespace N01374963_FinalAssignment
 
             db.AddBlogPost(new_post);
 
-            Response.Redirect("BlogHomepage.aspx");
+            Response.Redirect("ListBlogPost.aspx");
         }
     }
 }

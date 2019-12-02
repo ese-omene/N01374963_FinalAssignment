@@ -13,3 +13,19 @@ Each column should be 45.45% wide with a gutter space of 9.09%
     float: right;
     margin-right: 0;
 }
+
+.formrow{
+    display:block;
+    float:left;
+    clear:both;
+}
+.formrow1 {
+    display: inline-block;
+    float: left;
+    clear: both;
+}
+.formrow label{
+    display:block;
+}
+
+

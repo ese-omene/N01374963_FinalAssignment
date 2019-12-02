@@ -46,5 +46,10 @@ namespace N01374963_FinalAssignment
                 blogpost_result.InnerHtml += "</div>";
             }
         }
+
+        protected void newblogpost(object sender, EventArgs e)
+        {
+            Response.Redirect("NewBlogPost.aspx");
+        }
     }
 }

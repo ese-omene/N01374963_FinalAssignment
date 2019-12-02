@@ -6,9 +6,14 @@
         <asp:Label for="blogpost_search" runat="server">Search</asp:Label>
         <asp:TextBox ID="blogpost_search" runat="server"></asp:TextBox>
     <asp:Button runat="server" Text="search" />
+        <br />
+        <br />
   </div>
-
-<a href="NewBlogPost.aspx"> New Blog Posts</a>
+    <asp:Button OnClick="newblogpost" runat="server" Text="add new post"  />
+    <br />
+  <br />
+</div>
+<!--<a href="NewBlogPost.aspx"> New Blog Posts</a>-->
     <div class="_table" runat="server">
         <div class="listitem">
             <div class="col2"> Blog Title</div>

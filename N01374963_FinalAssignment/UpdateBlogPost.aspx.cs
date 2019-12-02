@@ -63,6 +63,7 @@ namespace N01374963_FinalAssignment
             if (valid)
             {
                 BLOGPOST blog_record = db.FindBlogPost(Int32.Parse(blogid));
+                update_title.InnerHtml = blog_record.GetBPTitle();
                 blog_title.Text = blog_record.GetBPTitle();
                 blog_post.Text = blog_record.GetBPBody();
             }
