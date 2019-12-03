@@ -163,8 +163,14 @@ namespace N01374963_FinalAssignment
 
         public void UpdateBlogPost(int blogid, BLOGPOST new_post)
         {
-            string query = "update blog_page set blogtitle='{0}', blogbody='{1}' where blogid={3} ";
+
+            //am i getting here?
+            Debug.WriteLine("is this where the problem is?");
+
+            string query = "update blog_post set blogtitle='{0}', blogbody='{1}' where blogid={2} ";
             query = String.Format(query, new_post.GetBPTitle(), new_post.GetBPBody(), blogid);
+
+            Debug.WriteLine("am i getting the information i need?");
 
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
             MySqlCommand cmd = new MySqlCommand(query, Connect);

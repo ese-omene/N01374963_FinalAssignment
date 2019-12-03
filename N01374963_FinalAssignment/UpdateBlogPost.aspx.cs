@@ -31,13 +31,15 @@ namespace N01374963_FinalAssignment
             string blogid = Request.QueryString["blogid"];
             if (String.IsNullOrEmpty(blogid)) valid = false;
 
+            Debug.WriteLine("i am trying to update the blog with id=" +blogid);
+
             if (valid)
             {
                 BLOGPOST new_blog = new BLOGPOST();
 
                 new_blog.SetBPTitle(blog_title.Text);
                 new_blog.SetBPBody(blog_post.Text);
-
+                Debug.WriteLine("the new blog title is "+blog_title.Text+" and the new blog body is "+blog_post.Text);
                 try
                 {
                     db.UpdateBlogPost(Int32.Parse(blogid), new_blog);
@@ -45,11 +47,13 @@ namespace N01374963_FinalAssignment
                 }
                 catch
                 {
+                    Debug.WriteLine("now im in the catch, is it working?");
                     valid = false;
                 }
             }
             if (!valid)
             {
+                Debug.WriteLine("last chance, but we kinda already know we got here");
                 blog.InnerHtml = "There was an error updating your blog";
             }
         }
@@ -62,6 +66,8 @@ namespace N01374963_FinalAssignment
 
             if (valid)
             {
+
+                Debug.WriteLine("is this it?");
                 BLOGPOST blog_record = db.FindBlogPost(Int32.Parse(blogid));
                 update_title.InnerHtml = blog_record.GetBPTitle();
                 blog_title.Text = blog_record.GetBPTitle();

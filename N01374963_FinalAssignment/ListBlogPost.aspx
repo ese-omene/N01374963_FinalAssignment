@@ -12,7 +12,7 @@
     <asp:Button OnClick="newblogpost" runat="server" Text="add new post"  />
     <br />
   <br />
-</div>
+
 
     <div class="_table" runat="server">
         <div class="listitem">
