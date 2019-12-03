@@ -13,7 +13,7 @@
     <br />
   <br />
 </div>
-<!--<a href="NewBlogPost.aspx"> New Blog Posts</a>-->
+
     <div class="_table" runat="server">
         <div class="listitem">
             <div class="col2"> Blog Title</div>

@@ -25,18 +25,34 @@ namespace N01374963_FinalAssignment
                 {
                     bloglist_result.InnerHtml += "<div class=\"listitem\">";
 
+
                     string blogid = row["blogid"];
 
                     string blogtitle = row["blogtitle"];
-                    bloglist_result.InnerHtml += "<div class\"col2\">" + blogtitle + "</div>";
+                    bloglist_result.InnerHtml += "<a href=\"ShowBlogPost.aspx?blogid=" + blogid + "\">" + blogtitle + "</a>";
 
                     string blogbody = row["blogbody"];
-                    bloglist_result.InnerHtml += "<div class=\"col2last\">" + blogbody + "</div>";
+                    // bloglist_result.InnerHtml += "<div class=\"col2last\">" + blogbody + "</div>";
 
-                    bloglist_result.InnerHtml += "</div>";
+                    bloglist_result.InnerHtml += "</div> ";
                 }
+            foreach (Dictionary<String, String> row in rs)
+            {
+                bloglist_result.InnerHtml += "<div class=\"main-post\">";
 
 
+                string blogid = row["blogid"];
+
+                string blogtitle = row["blogtitle"];
+                bloglist_result.InnerHtml += "<h2><a href=\"ShowBlogPost.aspx?blogid=" + blogid + "\">" + blogtitle + "</a></h2>";
+
+                string blogbody = row["blogbody"];
+                bloglist_result.InnerHtml += "<p>" + blogbody + "</p>";
+
+                bloglist_result.InnerHtml += "</div>";
             }
+
+
+        }
         }
     }
