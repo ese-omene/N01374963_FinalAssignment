@@ -4,6 +4,17 @@
 /*
 Each column should be 45.45% wide with a gutter space of 9.09%
 */
+nav ul li {
+    display:inline-block;
+    text-decoration: none;
+    text-transform:uppercase;
+    margin-right: 45px;
+}
+nav ul li a {
+    text-decoration: none;
+}
+
+
 .col2 {
     width: 50%;
     float: left;
@@ -39,6 +50,7 @@ Each column should be 45.45% wide with a gutter space of 9.09%
    clear:left;
    padding:10px;    
    width:25%;
+  
    background-color:pink;
 }
 .main-post {

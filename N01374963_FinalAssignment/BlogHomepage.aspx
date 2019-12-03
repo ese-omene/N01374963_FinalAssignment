@@ -4,13 +4,12 @@
 
 
 <asp:Content ID="blog_list" ContentPlaceHolderID="body" runat="server">
-    <h1> The Tale of Two Wmen</h1>
-    <p> Mommy / Web Dev</p>
-    
+   
 
     <div class="_table" runat="server">
-        <h1>Blog Archive</h1>
-            
+        
+             <h1>Blog Archive</h1>
+   
             
     <div id="bloglist_result" runat="server"></div>
     </div>
