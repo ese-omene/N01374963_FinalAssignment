@@ -15,13 +15,13 @@ namespace N01374963_FinalAssignment
         {
            
 
-                bloglist_result.InnerHtml = "";
+               bloglist_result.InnerHtml = "";
 
 
-                string query = "select * from blog_post";
+                string query = "select * from blog_post order by blogid desc";
                 var db = new BLOGDB();
                 List<Dictionary<String, String>> rs = db.List_Query(query);
-                foreach (Dictionary<String, String> row in rs)
+                /*foreach (Dictionary<String, String> row in rs)
                 {
                     bloglist_result.InnerHtml += "<div class=\"listitem\">";
 
@@ -35,7 +35,7 @@ namespace N01374963_FinalAssignment
                     // bloglist_result.InnerHtml += "<div class=\"col2last\">" + blogbody + "</div>";
 
                     bloglist_result.InnerHtml += "</div> ";
-                }
+                }*/
             foreach (Dictionary<String, String> row in rs)
             {
                 bloglist_result.InnerHtml += "<div class=\"main-post\">";

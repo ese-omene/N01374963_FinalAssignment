@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace N01374963_FinalAssignment
-{
-
-
-    public partial class Layout
-    {
-
+namespace N01374963_FinalAssignment {
+    
+    
+    public partial class Layout {
+        
         /// <summary>
         /// form1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace N01374963_FinalAssignment
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+        
         /// <summary>
         /// body control.
         /// </summary>

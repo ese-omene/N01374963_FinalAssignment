@@ -2,16 +2,22 @@
 
 <asp:Content ID="newblogpost" ContentPlaceHolderID="body" runat="server">
     <h2>New Blog Post</h2>
-    <label>Page Title</label>
+    <div id="newblogpost-main">
+
+        <div id="newblogpost-title">
+     <label>Blog Title</label> 
+    <asp:TextBox runat="server" ID="blog_title">please enter blog title</asp:TextBox>
+    </div>
     
-    <div class="formrow">
-    <asp:TextBox runat="server" ID="blog_title"></asp:TextBox>
+    <div id="newblogpost-body">
+    <label style="display:block">Blog Body</label>
+    <asp:TextBox runat="server" ID="blog_body" Height="200px" Width="80%" TextMode="MultiLine"></asp:TextBox>
     </div>
 
-    <div class="formrow">
-        <asp:TextBox runat="server" ID="blog_body"></asp:TextBox>
     </div>
-
+        
+    <br /><br />
+    <div>
     <asp:Button OnClick="AddPost" Text="Add Post" runat="server" />
-
+</div>
     </asp:Content>

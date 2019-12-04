@@ -10,24 +10,15 @@
 namespace N01374963_FinalAssignment {
     
     
-    public partial class NewBlogPost {
+    public partial class BlogPostMenu {
         
         /// <summary>
-        /// blog_title control.
+        /// bloglist_result control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox blog_title;
-        
-        /// <summary>
-        /// blog_body control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox blog_body;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl bloglist_result;
     }
 }

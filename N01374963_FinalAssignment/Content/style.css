@@ -1,5 +1,10 @@
-﻿*{
+﻿html{
     box-sizing:border-box;
+}
+
+*, *::before, *::after{
+    box-sizing:inherit;
+    
 }
 /*
 Each column should be 45.45% wide with a gutter space of 9.09%
@@ -12,7 +17,38 @@ nav ul li {
 }
 nav ul li a {
     text-decoration: none;
+    display:block;
+  
+
 }
+
+
+body{
+    background-color: #800080;
+}
+.main{
+    margin-top: 10px;
+}
+
+
+.page-container{
+    width:1000px;
+    margin: 0 auto;
+}
+#newblogpost-title{
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 10px;
+}
+
+a {
+    margin-right: 20px;
+    text-decoration:none;
+    color:white;
+}
+
 
 
 .col2 {
@@ -31,6 +67,8 @@ nav ul li a {
     display:block;
     float:left;
     clear:both;
+    height: 23px;
+    width: 214px;
 }
 .formrow1 {
     display: inline-block;
@@ -42,8 +80,8 @@ nav ul li a {
 }
 
 ._table{
-  
-    background-color: yellow;
+  margin-top:10px;
+
 }
 .listitem {
    float:left;
@@ -54,21 +92,27 @@ nav ul li a {
    background-color:pink;
 }
 .main-post {
-
-    float:left;
-    padding:10px;
-    width:75%;
+     padding-left: 10px;
+    width: 75%;
     /* width: 100%; */
-    background-color: green;
+    background-color: rgba(48, 25, 52, 0.75);
     font-size: 36px;
+    margin-bottom: 20px;
+}
+.main-post a{
+    color:#e75480;
 }
     .main-post p {
-       
+       margin-top:0px;
         height: 100px;
         width: 100%;
-         background-color: red;
+        color:#ffb6c1;
         font-size: 20px;
     }
     .clearfix{
+        clear:both;
+    }
+
+    footer{
         clear:both;
     }

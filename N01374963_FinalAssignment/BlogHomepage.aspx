@@ -8,8 +8,7 @@
 
     <div class="_table" runat="server">
         
-             <h1>Blog Archive</h1>
-   
+        
             
     <div id="bloglist_result" runat="server"></div>
     </div>

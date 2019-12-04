@@ -1,10 +1,10 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="N01374963_FinalAssignment.Layout" %>
-
+<%@ Register Src="~/BlogPostMenu.ascx" TagName="BlogPostMenu" TagPrefix="asp" %>
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>My Blog Page</title>
+    <title>My Blog Page- Two Left Turns Later</title>
     <link rel="stylesheet" type="text/css" href="/Content/style.css" />
     </head>
 <body>
@@ -14,25 +14,40 @@
                 <ul>
                     <li><a href="BlogHomepage.aspx">HomePage</a></li>
                     <li><a href="NewBlogPost.aspx">New Blog Post</a></li>
-                    <li><a href="ListBlogPost.aspx">List of Blog Posts</a></li>
+                    <li><a href="ListBlogPost.aspx">List of Blog Posts</a></li>  
+                        
                 </ul>
-
-            </nav>
-
+                </nav>
+            
         </div>
+        </header>
 
-
-    </header>
-     <h1> The Tale of Two Women</h1>
-    <p> Mommy / Web Dev</p>
-
+     <h1> Two Left Turns Later</h1>
+     
+    <p>a Reader, a Thinker, a Runner</p>
+    <div class="page-container">
+     <asp:BlogPostMenu runat="server"></asp:BlogPostMenu>
 
     <form id="form1" runat="server">
-        <div>
+        
+        <div id="main">
             <asp:ContentPlaceHolder ID="body" runat="server">
             </asp:ContentPlaceHolder>
         </div>
     </form>
+        </div>
+
+
+    <footer>
+         <nav>
+                <ul>
+                    <li><a href="BlogHomepage.aspx">HomePage</a></li>
+                    <li><a href="NewBlogPost.aspx">New Blog Post</a></li>
+                    <li><a href="ListBlogPost.aspx">List of Blog Posts</a></li>  
+                        
+                </ul>
+                </nav>
+    </footer>
 </body>
 </html>
 

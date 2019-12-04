@@ -124,6 +124,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="BlogHomepage.aspx" />
+    <Content Include="BlogPostMenu.ascx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -202,6 +203,13 @@
       <DependentUpon>BlogHomepage.aspx</DependentUpon>
     </Compile>
     <Compile Include="BLOGPOST.cs" />
+    <Compile Include="BlogPostMenu.ascx.cs">
+      <DependentUpon>BlogPostMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlogPostMenu.ascx.designer.cs">
+      <DependentUpon>BlogPostMenu.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -279,6 +287,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="data\" />
+    <Folder Include="wireframes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
