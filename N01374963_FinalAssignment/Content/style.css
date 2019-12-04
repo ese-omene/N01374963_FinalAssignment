@@ -52,13 +52,13 @@ a {
 
 
 .col2 {
-    width: 50%;
+    width: 25%;
     float: left;
     margin-right: 0;
 }
 
 .col2last {
-    width: 50%;
+    width: 75%;
     float: right;
     margin-right: 0;
 }
@@ -87,7 +87,7 @@ a {
    float:left;
    clear:left;
    padding:10px;    
-   width:25%;
+   width:100%;
   
    background-color:pink;
 }
@@ -102,12 +102,15 @@ a {
 .main-post a{
     color:#e75480;
 }
+    
+
     .main-post p {
-       margin-top:0px;
-        height: 100px;
+        margin-top: 0px;
         width: 100%;
-        color:#ffb6c1;
-        font-size: 20px;
+        color: #ffb6c1;
+        font-size: 12px;
+        line-height: 1.5em;
+        padding-left: inherit;
     }
     .clearfix{
         clear:both;
