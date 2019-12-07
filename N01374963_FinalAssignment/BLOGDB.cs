@@ -142,7 +142,7 @@ namespace N01374963_FinalAssignment
 
         public void AddBlogPost(BLOGPOST new_post)
         {
-            string query = "insert into blog_post (blogtitle, blogbody) values ('{0}','{1}')";
+            string query = 'insert into blog_post (blogtitle, blogbody) values ("{0}","{1}")';
             query = String.Format(query, new_post.GetBPTitle(), new_post.GetBPBody());
 
             MySqlConnection Connect = new MySqlConnection(ConnectionString);
